@@ -1,6 +1,9 @@
 import Product from "./models/Product.js";
-
+//import CartProducts from "./models/CartProducts.js";
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
 const data = {
     "huerto": {
       "id": 1,
@@ -8,124 +11,126 @@ const data = {
       "productos": [
         {
           "id": 11,
-          "nombre": "Tomates",
-          "categoria": "Verdura",
-          "temporada": "Verano",
-          "precio": 2.50,
-          "unidad": "kg",
-          "disponibilidad": 10,
-          "imagen": "https://www.pexels.com/es-es/buscar/tomates/"
+          "name": "Tomates",
+          "price": 2.50,
+          "description": "Descripcyion",
+          "category": "Verdura",
+          "station": "Verano",
+          "stock": 10,
+          "image": "https://www.pexels.com/es-es/buscar/tomates/"
         },
         {
           "id": 12,
-          "nombre": "Lechugas",
-          "categoria": "Verdura",
-          "temporada": "Todo el año",
-          "precio": 1.50,
-          "unidad": "unidad",
-          "disponibilidad": 15,
-          "imagen": "https://www.pexels.com/photo/bottom-view-of-green-leaved-tree-during-daytime-91153/"
+          "name": "Lechugas",
+          "price": 1.50,
+          "description" : "Descryopnco",
+          "category": "Verdura",
+          "station": "Todo el año",
+          "stock": 15,
+          "image": "https://www.pexels.com/photo/bottom-view-of-green-leaved-tree-during-daytime-91153/"
         },
         {
           "id": 13,
-          "nombre": "Pimientos",
-          "categoria": "Verdura",
-          "temporada": "Verano",
-          "precio": 2.00,
-          "unidad": "kg",
-          "disponibilidad": 8,
-          "imagen": "https://www.pexels.com/es-es/buscar/pimiento/"
+          "name": "Pimientos",
+          "price": 2.00,
+          "description" : "Descryopnco",
+          "category": "Verdura",
+          "station": "Verano",
+          "stock": 8,
+          "image": "https://www.pexels.com/es-es/buscar/pimiento/"
         },
         {
           "id": 14,
-          "nombre": "Manzanas",
-          "categoria": "Fruta",
-          "temporada": "Otoño",
-          "precio": 3.00,
-          "unidad": "kg",
-          "disponibilidad": 20,
-          "imagen": "https://www.pexels.com/es-es/buscar/manzana/"
+          "name": "Manzanas",
+          "price": 3.00,
+          "description" : "Descryopnco",
+          "category": "Fruta",
+          "station": "Otoño",
+          "stock": 20,
+          "image": "https://www.pexels.com/es-es/buscar/manzana/"
         },
         {
           "id": 15,
-          "nombre": "Peras",
-          "categoria": "Fruta",
-          "temporada": "Otoño",
-          "precio": 2.50,
-          "unidad": "kg",
-          "disponibilidad": 15,
-          "imagen": "https://www.pexels.com/es-es/buscar/pera/"
+          "name": "Peras",
+          "price": 2.50,
+          "description" : "Descryopnco",
+          "category": "Fruta",
+          "station": "Otoño",
+          "stock": 15,
+          "image": "https://www.pexels.com/es-es/buscar/pera/"
         },
         {
           "id": 16,
-          "nombre": "Uvas",
-          "categoria": "Fruta",
-          "temporada": "Verano",
-          "precio": 4.00,
-          "unidad": "kg",
-          "disponibilidad": 12,
-          "imagen": "https://www.pexels.com/es-es/buscar/uvas/"
+          "name": "Uvas",
+          "price": 4.00,
+          "description" : "Descryopnco",
+          "category": "Fruta",
+          "station": "Verano",
+          "stock": 12,
+          "image": "https://www.pexels.com/es-es/buscar/uvas/"
         },
         {
           "id": 17,
-          "nombre": "Cebollas",
-          "categoria": "Verdura",
-          "temporada": "Todo el año",
-          "precio": 1.00,
-          "unidad": "kg",
-          "disponibilidad": 25,
-          "imagen": "https://www.pexels.com/es-es/buscar/cebolla/"
+          "name": "Cebollas",
+          "price": 1.00,
+          "description" : "Descryopnco",
+          "category": "Verdura",
+          "station": "Todo el año",
+          "stock": 25,
+          "image": "https://www.pexels.com/es-es/buscar/cebolla/"
         },
         {
           "id": 18,
-          "nombre": "Patatas",
-          "categoria": "Hortaliza",
-          "temporada": "Otoño",
-          "precio": 1.50,
-          "unidad": "kg",
-          "disponibilidad": 30,
-          "imagen": "https://www.pexels.com/es-es/buscar/patata/"
+          "name": "Patatas",
+          "price": 1.50,
+          "description" : "Descryopnco",
+          "category": "Hortaliza",
+          "station": "Otoño",
+          "stock": 30,
+          "image": "https://www.pexels.com/es-es/buscar/patata/"
         },
         {
           "id": 19,
-          "nombre": "Calabazas",
-          "categoria": "Hortaliza",
-          "temporada": "Otoño",
-          "precio": 2.00,
-          "unidad": "unidad",
-          "disponibilidad": 10,
-          "imagen": "https://www.pexels.com/es-es/buscar/calabaza/"
+          "name": "Calabazas",
+          "price": 2.00,
+          "description" : "Descryopnco",
+          "category": "Hortaliza",
+          "station": "Otoño",
+          "stock": 10,
+          "image": "https://www.pexels.com/es-es/buscar/calabaza/"
         },
         {
           "id": 20,
-          "nombre": "Berenjenas",
-          "categoria": "Verdura",
-          "temporada": "Verano",
-          "precio": 2.50,
-          "unidad": "kg",
-          "disponibilidad": 15,
-          "imagen": "https://www.pexels.com/es-es/buscar/berenjena/"
+          "name": "Berenjenas",
+          "price": 2.50,
+          "description" : "Descryopnco",
+          "category": "Verdura",
+          "station": "Verano",
+          "stock": 15,
+          "image": "https://www.pexels.com/es-es/buscar/berenjena/"
         }
     ]}
 }
- 
-const cart = {
-    "productos": []
-}   
-
-   
 
 const tbody = document.querySelector('#tbody');
-const products = data.huerto.productos;
- 
-const tbody_cart = document.querySelector('#tbody_cart');
-const cart_added = cart.productos;
-
 tbody.addEventListener('click', handleEditClick);
- 
-for (let i = 0; i < products.length; i++) 
+const products = data.huerto.productos;
+const productos = products.map(producto => new Product(
+  producto.id,
+  producto.name,
+  producto.price,
+  producto.description,
+  producto.category,
+  producto.station, 
+  producto.stock,
+  producto.image  
+));
+
+console.log(productos);
+  
+for (let i = 0; i < productos.length; i++) 
 {
-  const product = new Product(products[i].id, products[i].nombre, products[i].precio, products[i].description, products[i].categoria, products[i].temporada, products[i].disponibilidad, products[i].imagen,);  
+  const product = new Product(products[i].id, products[i].name, products[i].price, products[i].description, products[i].category, products[i].station, products[i].stock, products[i].image,);  
   
   const row = `<tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -154,37 +159,40 @@ for (let i = 0; i < products.length; i++)
     </button>
     </td>
   </tr>`;
-
   
   tbody.innerHTML += row;
   //console.log(row); 
 }
 
+
+// CART
+const tbody_cart = document.querySelector('#tbody_cart');
+
+
 function handleEditClick(event) 
 {
   const button = event.target;
   const productId = parseInt(button.id.slice(12)); // Extrae el índice del producto del ID del botón
-  const product = products[productId]; // Obtiene el producto correspondiente al índice
-  const disponibilidad = product.disponibilidad; // Obtiene el valor de disponibilidad
+  
+  
+  const product = productos[productId]; // Obtiene el producto correspondiente al índice
+  const stock = product.stock; // Obtiene el valor de disponibilidad
   const elemento = document.getElementById(`stock_${productId}`);
   console.log(elemento); 
   
   switch (button.name) {
     case 'añadir':
-      let nueva_disponibilidad = disponibilidad + 1;
-      console.log('¡Botón de añadir presionado para el producto:', product.nombre);
-      console.log('Disponibilidad:', nueva_disponibilidad);
-      product.disponibilidad = nueva_disponibilidad; 
-      elemento.innerHTML = product.disponibilidad;
-      addToCart(product);
+      let increased_stock = stock + 1;
+      product.stock = increased_stock; 
+      elemento.innerHTML = product.stock;
+
       break;  
         
     case 'quitar':
-      let restar_disponibilidad = disponibilidad - 1;
-      console.log('¡Botón de quitar presionado para el producto:', product.nombre);
-      console.log('Disponibilidad:', product.disponibilidad);
-      product.disponibilidad = restar_disponibilidad;
-      elemento.innerHTML = product.disponibilidad
+      let decrease_stock = stock - 1;
+      product.stock = decrease_stock;
+      elemento.innerHTML = product.stock
+      CartaddToCart(product);
     break; 
 
     default:
@@ -192,26 +200,27 @@ function handleEditClick(event)
   }
 
 }
+/*
+const cartProducts = new CartProducts();
+console.log(cartProducts);
 
 function addToCart(producto) 
 {
-  // Verificar si el producto ya está en el carrito
-  const index = cart.productos.findIndex(p => p.nombre === producto.nombre);
+  const index = cart.productos.findIndex(p => p.name === producto.name);
 
   if (index !== -1) {
-    cart.productos[index].disponibilidad += 1;
-    document.getElementById(`disponibilidad_${index}`).innerText = cart.productos[index].disponibilidad;
+    document.getElementById(`disponibilidad_${index}`).innerText = cart.productos[index].stock;
   } else {
     cart.productos.push(producto);
     const row = `<tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-      <td class="px-6 py-4">${producto.nombre}</td> 
-      <td class="px-6 py-4">${producto.categoria}</td>
-      <td class="px-6 py-4">${producto.precio}</td> 
-      <td id="disponibilidad_${cart.productos.length - 1}" class="px-6 py-4">${producto.disponibilidad}</td>
+      <td class="px-6 py-4">${producto.name}</td> 
+      <td class="px-6 py-4">${producto.category}</td>
+      <td class="px-6 py-4">${producto.price}</td> 
+      <td id="disponibilidad_${cart.productos.length - 1}" class="px-6 py-4">${producto.stock}</td>
     </tr>`;
   
     tbody_cart.innerHTML += row;
   }
-}
+}*/
 
 });

@@ -1,7 +1,7 @@
 export default class Product
 {
 
-    constructor(id, name, price, description, category, station, stock, imagen)
+    constructor(id, name, price, description, category, station, stock, image)
     {
         this.id = id;
         this.name = name;
@@ -10,9 +10,9 @@ export default class Product
         this.category = category;
         this.station = station;
         this.stock = stock;
-        this.imagen = imagen;
+        this.image = image;
     }
-
+    
 
     // MÉTODOS setter's y getter's
     setId (id) { this.id = id; }

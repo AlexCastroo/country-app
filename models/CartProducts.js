@@ -2,9 +2,9 @@ import Product from "./Product";
 
 export default class CartProducts 
 {
-    constructor()
+    constructor(Product = [], quantity)
     {
-        this.products = new Product([]);
+        this.products = Product([]);
         this.quantity = quantity;
     }
 
@@ -14,4 +14,14 @@ export default class CartProducts
 
     setQuantity(quantity) { this.quantity = quantity};
     getQuantity() { return this.quantity};
+
+    addToCart(Product)
+    {
+        if(this.products.include(Product) === true)
+            {
+                console.log('Está añadido -> Incrementar su unidad');
+            }else{
+                console.loh('No esta añadido -> AÑadir nueva instancia');
+            }
+    }
 }
