@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" type="module"></script>
+</head>
+<body>
+    
+<!-- HEADING -->
+<div class="flex flex-row gap-4">
+
+    <div class="container my-20 p-10 mx-auto relative overflow-x-auto shadow-md sm:rounded-lg">
+
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">El mejor producto <span class="text-blue-600 dark:text-blue-500">ECO FRESCO</span>. De la huerta a la mesa.</h1>
+    <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Plataforma de pedidos de productos directos y frecos del día.</p>
+
+ 
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+            La Huerta de Manolo
+                <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Propietario: Manolo</p>
+            </caption>
+            <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+                <tr> 
+                    <th scope="col" class="px-6 py-3">
+                        PRODUCTO
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        CATEGORÍA
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        TEMPORADA
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        PRECIO
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        DISPONIBILIDAD
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        AÑADIR
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+                </tbody>
+        </table>
+    </div>
+
+    <div class="container mx-auto my-20">
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                    Carrito de la compra
+                        <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Productos</p>
+                    </caption>
+                    
+                    <tbody id="tbody_cart">
+                        
+                    </tbody>
+                </table>
+            </div>
+    </div>
+
+</div>
+
+
+    
+</body>
+</html>
