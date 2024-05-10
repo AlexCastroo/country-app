@@ -9,11 +9,46 @@
 
 </head>
 <body>
+
+
+
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+            <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ECO Fresco</span>
+            </a>
+            <div class="flex items-center space-x-6 rtl:space-x-reverse">
+                <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline">000 - 000</a>
+                <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+            </div>
+        </div>
+    </nav>
+    <nav class="bg-gray-50 dark:bg-gray-700">
+        <div class="max-w-screen-xl px-4 py-3 mx-auto">
+            <div class="flex items-center">
+                <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                    <li>
+                        <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900 dark:text-white hover:underline">Huertos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900 dark:text-white hover:underline">Equipo</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-900 dark:text-white hover:underline">Compromiso</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
 <!-- HEADING -->
-<div id="group" class="flex flex-row gap-4">
+<div id="group" class="flex flex-col md:flex-row">
 
-    <div class="container my-20 p-10 mx-auto relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="container my-20 p-10 mx-10 relative overflow-x-auto shadow-md sm:rounded-lg">
 
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">El mejor producto <span class="text-blue-600 dark:text-blue-500">ECO FRESCO</span>. De la huerta a la mesa.</h1>
     <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Plataforma de pedidos de productos directos y frecos del día.</p>
@@ -30,6 +65,9 @@
                         PRODUCTO
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        CONTROL STOCK
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         CATEGORÍA
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -39,11 +77,9 @@
                         PRECIO
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        DISPONIBILIDAD
+                        STOCK
                     </th>
-                    <th scope="col" class="px-6 py-3">
-                        UDS
-                    </th>
+                    
                 </tr>
             </thead>
             <tbody id="tbody">
@@ -52,13 +88,11 @@
         </table>
     </div>
 
-    <div class="container mx-auto my-20">
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="container my-20 p-10 mx-10 relative overflow-x-auto shadow-md sm:rounded-lg">
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Carrito<span class="text-blue-600 dark:text-blue-500"> de la compra</span></h1>
+                    <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Más carrito que nunca</p>
+                
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                    Carrito de la compra
-                        <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Productos</p>
-                    </caption>
                     <thead class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
                         <tr> 
                             <th scope="col" class="px-6 py-3">
@@ -74,25 +108,33 @@
                                 PRECIO
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                DISPONIBILIDAD
+                                UDS
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                AÑADIR
+                                SUBTOTAL
                             </th>
                         </tr>
                     </thead>
                     
                     <tbody id="tbody_cart">
-                        <button 
+                        
+
+                    </tbody>
+                    
+                </table>
+
+                <div class="flex flex-col justify-center md:container md:mx-auto my-10">
+                    <p id="total_cart" class="text-4xl font-bold text-gray-900 dark:text-white text-center"></p>
+                    <button 
                             name="remove_cart" 
                             id="remove_cart"
                             type="button"
-                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-5  dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                             Limpiar Carrito
                         </button>
-                    </tbody>
-                </table>
-            </div>
+                  </div>
+                
+            
     </div>
 
 </div>
