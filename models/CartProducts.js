@@ -45,12 +45,12 @@ export default class CartProducts {
             this.products.push(product);
 
             const row = `<tr id="item_${product.id}" class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                <td class="px-6 py-4">${product.name}</td> 
-                <td class="px-6 py-4">${product.category}</td>
-                <td class="px-6 py-4">${product.station}</td>
-                <td class="px-6 py-4">${product.price}</td> 
-                <td id="uds_${product.id}"class="px-6 py-4">${product.quantity}</td>
-                <td id="total_${product.id}"class="px-6 py-4">${product.total = product.quantity * product.price}
+                <td class="px-1 md:px-6 md:py-4">${product.name}</td> 
+                <td class="px-1 md:px-6 md:py-4">${product.category}</td>
+                <td class="px-1 md:px-6 md:py-4">${product.station}</td>
+                <td class="px-1 md:px-6 md:py-4">${product.price}</td> 
+                <td id="uds_${product.id}"class="px-1 md:px-6 md:py-4">${product.quantity}</td>
+                <td id="total_${product.id}"class="px-1 md:px-6 md:py-4">${product.total = product.quantity * product.price}
             </td>
             </tr>`;
             this.updateCartSubtotal();

@@ -15,7 +15,7 @@ const data = {
           "category": "Verdura",
           "station": "Verano",
           "stock": 10,
-          "image": "https://www.pexels.com/es-es/buscar/tomates/"
+          "image": "tomate-fresco.jpg"
         },
         {
           "id": 12,
@@ -25,7 +25,7 @@ const data = {
           "category": "Verdura",
           "station": "Todo el año",
           "stock": 15,
-          "image": "https://www.pexels.com/photo/bottom-view-of-green-leaved-tree-during-daytime-91153/"
+          "image": "lechuga-fresca.jpg"
         },
         {
           "id": 13,
@@ -35,7 +35,7 @@ const data = {
           "category": "Verdura",
           "station": "Verano",
           "stock": 8,
-          "image": "https://www.pexels.com/es-es/buscar/pimiento/"
+          "image": "pimiento-fresco.jpg"
         },
         {
           "id": 14,
@@ -45,7 +45,7 @@ const data = {
           "category": "Fruta",
           "station": "Otoño",
           "stock": 20,
-          "image": "https://www.pexels.com/es-es/buscar/manzana/"
+          "image": "manzanas-frescas.jpg"
         },
         {
           "id": 15,
@@ -55,7 +55,7 @@ const data = {
           "category": "Fruta",
           "station": "Otoño",
           "stock": 15,
-          "image": "https://www.pexels.com/es-es/buscar/pera/"
+          "image": "peras-frescas.jpg"
         },
         {
           "id": 16,
@@ -65,7 +65,7 @@ const data = {
           "category": "Fruta",
           "station": "Verano",
           "stock": 12,
-          "image": "https://www.pexels.com/es-es/buscar/uvas/"
+          "image": "uvas-frescas.jpg"
         },
         {
           "id": 17,
@@ -75,7 +75,7 @@ const data = {
           "category": "Verdura",
           "station": "Todo el año",
           "stock": 25,
-          "image": "https://www.pexels.com/es-es/buscar/cebolla/"
+          "image": "cebollas-frecsas.webp"
         },
         {
           "id": 18,
@@ -85,7 +85,7 @@ const data = {
           "category": "Hortaliza",
           "station": "Otoño",
           "stock": 30,
-          "image": "https://www.pexels.com/es-es/buscar/patata/"
+          "image": "patatas-frescas.jpg"
         },
         {
           "id": 19,
@@ -95,7 +95,7 @@ const data = {
           "category": "Hortaliza",
           "station": "Otoño",
           "stock": 10,
-          "image": "https://www.pexels.com/es-es/buscar/calabaza/"
+          "image": "calabaazas-frescas.jpg"
         },
         {
           "id": 20,
@@ -105,7 +105,7 @@ const data = {
           "category": "Verdura",
           "station": "Verano",
           "stock": 15,
-          "image": "https://www.pexels.com/es-es/buscar/berenjena/"
+          "image": "berenjenas-frescas.jpg"
         }
     ]}
 } 
@@ -130,7 +130,7 @@ console.log(productos);
 for (let i = 0; i < productos.length; i++) 
 {
   const product = new Product(products[i].id, products[i].name, products[i].price, products[i].description, products[i].category, products[i].station, products[i].stock, products[i].image,);  
-  
+  /*
   const row = `<tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
       ${product.name} 
@@ -158,7 +158,46 @@ for (let i = 0; i < productos.length; i++)
     <td class="px-6 py-4">${product.price}</td> 
     <td id="stock_` + i + `" class="px-6 py-4">${product.stock}</td> 
     
-  </tr>`;
+  </tr>`;*/
+
+  const row = `<a class="flex flex-col mb-4 items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+  <img class="object-cover w-full rounded-t-lg h-40 md:h-full md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="./assets/img/${product.image}" alt="" />
+  <div class="flex flex-col justify-between p-4 leading-normal">
+      
+      <div class="flex flex-col justify-between p-4 leading-normal">
+      <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">${product.name}</h5>
+          <div class="grid grid-cols-3">
+              <div>Categoría: ${product.category}</div>
+              <div>Temporada: ${product.station}</div>
+              <div>
+                  <button 
+                      name="add-item" 
+                      id="edit-button-${i}" 
+                      type="button" 
+                      class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                      Añadir
+                  </button>
+              </div>
+              <div>Precio/kg: ${product.price}</div>
+              <div id="stock_` + i + `">Stock: ${product.stock}</div>
+              <div>
+                  <button 
+                      name="remove-item" 
+                      id="edit-button-${i}" 
+                      type="button" 
+                      class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                      Quitar
+                  </button>
+              </div>
+          </div>
+                      
+      </div>
+  </div>
+</a>
+  
+
+  
+  `;
   
   tbody.innerHTML += row;
 }
